@@ -1,16 +1,16 @@
 // Add console.log to check to see if our code is working.
 console.log("working");
 
-// Create the map object with a geographic center and zoom level.
-let map = L.map('mapid').setView([40.7, -94.5], 4);
+// // Create the map object with a geographic center and zoom level.
+// let map = L.map('mapid').setView([40.7, -94.5], 4);
 
-// // Create the map object with a center and zoom level.  useful when multiple tile layers or a background image of maps
-// let map = L.map("mapid", {
-//     center: [
-//       40.7, -94.5
-//     ],
-//     zoom: 4
-//   });
+// Create the map object with a center and zoom level.  useful when multiple tile layers or a background image of maps
+let map = L.map("mapid", {
+    center: [
+      40.7, -94.5
+    ],
+    zoom: 4
+  });
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
