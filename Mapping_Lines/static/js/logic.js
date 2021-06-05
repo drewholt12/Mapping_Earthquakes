@@ -5,13 +5,14 @@ console.log("working");
 // let map = L.map('mapid').setView([40.7, -94.5], 4);
 
 // Create the map object with a center and zoom level.  useful when multiple tile layers or a background image of maps
-let map = L.map("mapid", {
-  center: [
-    40.58, -95.77
-  ],
-  zoom: 5
-});
+// let map = L.map("mapid", {
+//   center: [36.1733, -120.1794],
+//   zoom: 7
+// });
 
+// Changed map object to use setview() method
+// Create the map object with center at the San Francisco airport.
+let map = L.map('mapid').setView([37.6213, -122.3790], 5);
 
 // //  Add a marker to the map for Los Angeles, California.
 // let marker = L.marker([34.0522, -118.2437]).addTo(map);
@@ -35,7 +36,16 @@ cityData.forEach(function (city) {
 });
 // skill drill for above- changed radius to divided by 200,000... chaged color to orange, fill to orange, and lineweight to 4--  then changed to darkmap below
 
+// Coordinates for each point to be used in the line.
+let line = [
+  [33.9416, -118.4085],
+  [37.6213, -122.3790]
+];
 
+// Create a polyline using the line coordinates and make the line red.
+L.polyline(line, {
+  color: "red"
+}).addTo(map);
 
 //  Add a circle marker to the map for Los Angeles, California.
 // L.circle([34.0522, -118.2437], {
