@@ -221,7 +221,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     // We create a popup for each circleMarker to display the magnitude and location of the earthquake
     //  after the marker has been created and styled.
     onEachFeature: function (feature, layer) {
-      layer.bindPopup("<h1>" + "Major Earthquake" + "</h1>" + "<br>" + "<h3>" +  "Magnitude: " + feature.properties.mag + "</h3>" + "<br>" + "<h3>" + "Location: " + feature.properties.place + "</h3>");
+      layer.bindPopup("Major Earthquake" + "<br>Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
     }
   }).addTo(majorEQ);
   // 8. Add the major earthquakes layer to the map.
